@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: Swagger-ui-page
+
+server:
+  port: 8083
+
+springdoc:
+  swagger-ui:
+    urls:
+      -
+        name: Image uploader Service
+        url: http://localhost:8080/image-uploader/v3/api-docs
+      -
+        name: Image transformer Service
+        url: http://localhost:8080/image-transformer/v3/api-docs

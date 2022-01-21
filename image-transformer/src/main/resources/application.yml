@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: Image transformer
+
+server:
+  port: 8082
+  servlet:
+    context-path: /image-transformer

@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: Api gateway
+  cloud:
+    gateway:
+      routes:
+        - id: imageUploader
+          uri: http://localhost:8081/
+          predicates:
+            - Path=/image-uploader/api/**, /image-uploader/v3/api-docs
+        - id: imageTransformer
+          uri: http://localhost:8082/
+          predicates:
+            - Path=/image-transformer/api/**, /image-transformer/v3/api-docs
+      filter:
+        remove-response-header:
+          enabled: off
+
+server:
+  port: 8080
